@@ -9,10 +9,10 @@ interface IParams {
   token?: string | null;
 }
 
-const queryKey = (params: Partial<IParams>) => ["evolutionBot", "fetchDefaultSettings", JSON.stringify(params)];
+const queryKey = (params: Partial<IParams>) => ["EvolutionBot", "fetchDefaultSettings", JSON.stringify(params)];
 
 export const findDefaultSettingsEvolutionBot = async ({ instanceName, token }: IParams) => {
-  const response = await api.get(`/evolutionBot/fetchSettings/${instanceName}`, { headers: { apiKey: token } });
+  const response = await api.get(`/EvolutionBot/fetchSettings/${instanceName}`, { headers: { apiKey: token } });
   if (Array.isArray(response.data)) {
     return response.data[0];
   }

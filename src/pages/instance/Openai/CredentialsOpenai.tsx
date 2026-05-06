@@ -21,7 +21,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFindOpenaiCreds } from "@/lib/queries/openai/findOpenaiCreds";
 import { useManageOpenai } from "@/lib/queries/openai/manageOpenai";
 
-import { OpenaiCreds } from "@/types/evolution.types";
+import { OpenaiCreds } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   name: z.string(),

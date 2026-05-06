@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsEvoai } from "@/lib/queries/evoai/fetchSessionsEvoai";
 import { useManageEvoai } from "@/lib/queries/evoai/manageEvoai";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsEvoai({ evoaiId }: { evoaiId?: string }) {
   const { t } = useTranslation();

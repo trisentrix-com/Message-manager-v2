@@ -1,4 +1,4 @@
-import { Dify, DifySettings } from "@/types/evolution.types";
+import { Dify, DifySettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

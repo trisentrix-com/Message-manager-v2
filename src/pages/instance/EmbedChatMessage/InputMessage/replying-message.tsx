@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useEmbedColors } from "@/contexts/EmbedColorsContext";
 import { ReplyMessageContext } from "@/contexts/ReplyingMessage/ReplyingMessageContext";
 
-import { Contact } from "@/types/evolution.types";
+import { Contact } from "@/types/Evolution.types";
 
 // Removed contact-colors import - using simple color logic
 

@@ -1,4 +1,4 @@
-import { Webhook } from "@/types/evolution.types";
+import { Webhook } from "@/types/Evolution.types";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type FetchWebhookResponse = Omit<Webhook, "base64" | "byEvents"> & {

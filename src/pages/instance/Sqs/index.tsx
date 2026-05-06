@@ -17,7 +17,7 @@ import { useFetchSqs } from "@/lib/queries/sqs/fetchSqs";
 import { useManageSqs } from "@/lib/queries/sqs/manageSqs";
 import { cn } from "@/lib/utils";
 
-import { Sqs as SqsType } from "@/types/evolution.types";
+import { Sqs as SqsType } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   enabled: z.boolean(),

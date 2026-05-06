@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useGetOpenai } from "@/lib/queries/openai/getOpenai";
 import { useManageOpenai } from "@/lib/queries/openai/manageOpenai";
 
-import { Openai } from "@/types/evolution.types";
+import { Openai } from "@/types/Evolution.types";
 
 import { OpenaiForm, FormSchemaType } from "./OpenaiForm";
 

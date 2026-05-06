@@ -241,7 +241,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/manager/instance/:instanceId/evolutionBot",
+    path: "/manager/instance/:instanceId/EvolutionBot",
     element: (
       <ProtectedRoute>
         <InstanceLayout>
@@ -251,7 +251,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/manager/instance/:instanceId/evolutionBot/:evolutionBotId",
+    path: "/manager/instance/:instanceId/EvolutionBot/:EvolutionBotId",
     element: (
       <ProtectedRoute>
         <InstanceLayout>

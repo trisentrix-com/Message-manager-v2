@@ -8,7 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 
 import { useEmbedColors } from "@/contexts/EmbedColorsContext";
 
-import { Instance } from "@/types/evolution.types";
+import { Instance } from "@/types/Evolution.types";
 
 interface MediaOptionsProps {
   instance: Instance;

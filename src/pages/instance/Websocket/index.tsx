@@ -17,7 +17,7 @@ import { useFetchWebsocket } from "@/lib/queries/websocket/fetchWebsocket";
 import { useManageWebsocket } from "@/lib/queries/websocket/manageWebsocket";
 import { cn } from "@/lib/utils";
 
-import { Websocket as WebsocketType } from "@/types/evolution.types";
+import { Websocket as WebsocketType } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   enabled: z.boolean(),

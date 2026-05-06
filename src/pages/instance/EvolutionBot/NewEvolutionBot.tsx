@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 
 import { useManageEvolutionBot } from "@/lib/queries/evolutionBot/manageEvolutionBot";
 
-import { EvolutionBot } from "@/types/evolution.types";
+import { EvolutionBot } from "@/types/Evolution.types";
 
 import { FormSchemaType, EvolutionBotForm } from "./EvolutionBotForm";
 
@@ -31,7 +31,7 @@ function NewEvolutionBot({ resetTable }: { resetTable: () => void }) {
       }
 
       setUpdating(true);
-      const evolutionBotData: EvolutionBot = {
+      const EvolutionBotData: EvolutionBot = {
         enabled: data.enabled,
         description: data.description,
         apiUrl: data.apiUrl,
@@ -54,9 +54,9 @@ function NewEvolutionBot({ resetTable }: { resetTable: () => void }) {
       await createEvolutionBot({
         instanceName: instance.name,
         token: instance.token,
-        data: evolutionBotData,
+        data: EvolutionBotData,
       });
-      toast.success(t("evolutionBot.toast.success.create"));
+      toast.success(t("EvolutionBot.toast.success.create"));
       setOpen(false);
       resetTable();
     } catch (error: any) {
@@ -72,12 +72,12 @@ function NewEvolutionBot({ resetTable }: { resetTable: () => void }) {
       <DialogTrigger asChild>
         <Button size="sm">
           <PlusIcon size={16} className="mr-1" />
-          <span className="hidden sm:inline">{t("evolutionBot.button.create")}</span>
+          <span className="hidden sm:inline">{t("EvolutionBot.button.create")}</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="overflow-y-auto sm:max-h-[600px] sm:max-w-[740px]">
         <DialogHeader>
-          <DialogTitle>{t("evolutionBot.form.title")}</DialogTitle>
+          <DialogTitle>{t("EvolutionBot.form.title")}</DialogTitle>
         </DialogHeader>
         <EvolutionBotForm onSubmit={onSubmit} isModal={true} isLoading={updating} />
       </DialogContent>

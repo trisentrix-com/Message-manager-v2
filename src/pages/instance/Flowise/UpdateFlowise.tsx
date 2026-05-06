@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useGetFlowise } from "@/lib/queries/flowise/getFlowise";
 import { useManageFlowise } from "@/lib/queries/flowise/manageFlowise";
 
-import { Flowise } from "@/types/evolution.types";
+import { Flowise } from "@/types/Evolution.types";
 
 import { FlowiseForm, FormSchemaType } from "./FlowiseForm";
 

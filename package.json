@@ -1,37 +1,37 @@
 {
-  "name": "evolution-manager",
+  "name": "message-manager",
   "private": false,
   "version": "2.0.0",
   "type": "module",
-  "description": "Modern web interface for Evolution API management",
+  "description": "Modern web interface for Message API management",
   "keywords": [
     "whatsapp",
     "api",
     "chatbot",
-    "evolution-api",
+    "message-api",
     "react",
     "typescript",
     "management",
     "dashboard"
   ],
-  "homepage": "https://github.com/EvolutionAPI/evolution-manager-v2#readme",
+  "homepage": "https://github.com/messageAPI/message-manager-v2#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvolutionAPI/evolution-manager-v2.git"
+    "url": "git+https://github.com/messageAPI/message-manager-v2.git"
   },
   "bugs": {
-    "url": "https://github.com/EvolutionAPI/evolution-manager-v2/issues"
+    "url": "https://github.com/messageAPI/message-manager-v2/issues"
   },
   "license": "Apache-2.0",
   "author": {
-    "name": "Evolution API Team",
-    "email": "contato@evolution-api.com",
-    "url": "https://evolution-api.com"
+    "name": "Message API Team",
+    "email": "contato@message-api.com",
+    "url": "https://message-api.com"
   },
   "contributors": [
     {
-      "name": "Evolution API Team",
-      "email": "contato@evolution-api.com"
+      "name": "Message API Team",
+      "email": "contato@message-api.com"
     }
   ],
   "engines": {

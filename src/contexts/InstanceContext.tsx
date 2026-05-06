@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 import { useFetchInstance } from "@/lib/queries/instance/fetchInstance";
 
-import { Instance } from "@/types/evolution.types";
+import { Instance } from "@/types/Evolution.types";
 
 interface InstanceContextProps {
   instance: Instance | null;

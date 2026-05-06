@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { useEmbedColors } from "@/contexts/EmbedColorsContext";
 import { useFindMessages } from "@/lib/queries/chat/findMessages";
-import { Instance, Message } from "@/types/evolution.types";
+import { Instance, Message } from "@/types/Evolution.types";
 import { MessageContent } from "./message-content";
 
 interface MessagesProps {

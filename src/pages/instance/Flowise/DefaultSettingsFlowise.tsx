@@ -18,7 +18,7 @@ import { useFindDefaultSettingsFlowise } from "@/lib/queries/flowise/findDefault
 import { useFindFlowise } from "@/lib/queries/flowise/findFlowise";
 import { useManageFlowise } from "@/lib/queries/flowise/manageFlowise";
 
-import { FlowiseSettings } from "@/types/evolution.types";
+import { FlowiseSettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   expire: z.string(),

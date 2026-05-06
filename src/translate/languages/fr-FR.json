@@ -61,7 +61,7 @@
     "dify": "Dify",
     "evoai": "EvoAI",
     "n8n": "n8n",
-    "evolutionBot": "Bot Evolution",
+    "EvolutionBot": "Bot message",
     "flowise": "Flowise",
     "documentation": "Documentation",
     "postman": "Postman",
@@ -76,7 +76,7 @@
     }
   },
   "login": {
-    "title": "Evolution Manager",
+    "title": "Message Manager",
     "description": "Veuillez vous connecter pour continuer",
     "form": {
       "serverUrl": "URL du Serveur",
@@ -102,7 +102,7 @@
         "whatsapp": "WhatsApp Cloud API",
         "facebook": "Facebook",
         "instagram": "Instagram",
-        "evolution": "Evolution"
+        "message": "message"
       },
       "token": "Token",
       "number": "Numéro",
@@ -1133,8 +1133,8 @@
       }
     }
   },
-  "evolutionBot": {
-    "title": "Bots Evolution",
+  "EvolutionBot": {
+    "title": "Bots message",
     "sessions": {
       "label": "Sessions",
       "search": "Rechercher par remoteJid...",
@@ -1160,18 +1160,18 @@
         "error": "Une erreur est survenue lors de l'application des paramètres par défaut"
       },
       "success": {
-        "update": "Bots Evolution mis à jour avec succès",
-        "create": "Bots Evolution créé avec succès",
-        "delete": "Bots Evolution supprimé avec succès",
-        "status": "Statut de Bots Evolution mis à jour avec succès"
+        "update": "Bots message mis à jour avec succès",
+        "create": "Bots message créé avec succès",
+        "delete": "Bots message supprimé avec succès",
+        "status": "Statut de Bots message mis à jour avec succès"
       },
-      "error": "Une erreur est survenue lors de la création de Bots Evolution"
+      "error": "Une erreur est survenue lors de la création de Bots message"
     },
     "table": {
       "none": "Rien à afficher"
     },
     "form": {
-      "title": "Nouveau Bots Evolution",
+      "title": "Nouveau Bots message",
       "examples": {
         "keywordFinish": "#FINISH",
         "unknownMessage": "Désolé, je n'ai pas compris. Pouvez-vous réessayer ?"
@@ -1182,8 +1182,8 @@
       "description": {
         "label": "Description"
       },
-      "evolutionBotSettings": {
-        "label": "Paramètres de Bots Evolution"
+      "EvolutionBotSettings": {
+        "label": "Paramètres de Bots message"
       },
       "apiUrl": {
         "label": "URL de l'API"
@@ -1216,7 +1216,7 @@
         "label": "Conditions"
       },
       "botIdFallback": {
-        "label": "Fallback de Bots Evolution"
+        "label": "Fallback de Bots message"
       },
       "generalSettings": {
         "label": "Paramètres Généraux"
@@ -1261,7 +1261,7 @@
       }
     },
     "button": {
-      "create": "Bots Evolution",
+      "create": "Bots message",
       "save": "Enregistrer",
       "saving": "Enregistrement...",
       "update": "Mettre à jour",

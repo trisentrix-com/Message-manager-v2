@@ -1,17 +1,17 @@
-# Evolution Manager v2
+# Message Manager v2
 
 <div align="center">
 
-![Evolution Manager Logo](public/assets/images/evolution-logo.png)
+![Message Manager Logo](public/assets/images/message-logo.png)
 
-**Modern Web Interface for Evolution API Management**
+**Modern Web Interface for Message API Management**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue.svg)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.3.4-646CFF.svg)](https://vitejs.dev/)
 
-[🌐 Demo](https://manager.evolution-api.com) • [📖 Documentation](https://doc.evolution-api.com) • [💬 Community](https://evolution-api.com/discord)
+[🌐 Demo](https://manager.message-api.com) • [📖 Documentation](https://doc.message-api.com) • [💬 Community](https://message-api.com/discord)
 
 </div>
 
@@ -33,7 +33,7 @@
 
 ## 🚀 About
 
-Evolution Manager v2 is a modern, responsive web interface built with React and TypeScript for managing [Evolution API](https://github.com/EvolutionAPI/evolution-api) instances. It provides a comprehensive dashboard for WhatsApp API management, chatbot integrations, and real-time monitoring.
+Message Manager v2 is a modern, responsive web interface built with React and TypeScript for managing [Message API](https://github.com/messageAPI/message-api) instances. It provides a comprehensive dashboard for WhatsApp API management, chatbot integrations, and real-time monitoring.
 
 ### Key Highlights
 
@@ -47,27 +47,31 @@ Evolution Manager v2 is a modern, responsive web interface built with React and 
 ## ✨ Features
 
 ### 📊 **Dashboard & Monitoring**
+
 - Instance overview and status monitoring
 - Real-time connection status
 - Performance metrics and analytics
 - Multi-instance management
 
 ### 💬 **Chat Management**
+
 - WhatsApp chat interface
 - Message history and search
 - Media file handling
 - Contact management
 
 ### 🤖 **Chatbot Integrations**
+
 - **OpenAI** - GPT-powered conversations
 - **Dify** - AI workflow automation
 - **Typebot** - Visual flow builder
 - **Chatwoot** - Customer support platform
 - **Flowise** - Low-code AI apps
 - **N8N** - Workflow automation
-- **Evolution Bot** - Built-in chatbot
+- **message Bot** - Built-in chatbot
 
 ### 🔗 **Event Integrations**
+
 - **Webhook** - HTTP event delivery
 - **WebSocket** - Real-time events
 - **RabbitMQ** - Message queue integration
@@ -75,12 +79,14 @@ Evolution Manager v2 is a modern, responsive web interface built with React and 
 - **Apache Kafka** - Event streaming platform
 
 ### ⚙️ **Configuration Management**
+
 - Instance settings and behavior
 - Proxy configuration
 - Authentication management
 - Environment variables
 
 ### 🎨 **User Experience**
+
 - Dark/Light theme support
 - Multi-language interface
 - Responsive design
@@ -93,15 +99,19 @@ Evolution Manager v2 is a modern, responsive web interface built with React and 
 <summary>Click to view screenshots</summary>
 
 ### Dashboard
+
 ![Dashboard](docs/images/dashboard.png)
 
 ### Chat Interface
+
 ![Chat](docs/images/chat.png)
 
 ### Chatbot Configuration
+
 ![Chatbot](docs/images/chatbot.png)
 
 ### Settings
+
 ![Settings](docs/images/settings.png)
 
 </details>
@@ -111,16 +121,15 @@ Evolution Manager v2 is a modern, responsive web interface built with React and 
 ### Prerequisites
 
 - Node.js 18+ and npm
-- Evolution API instance running
+- Message API instance running
 - Modern web browser
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/EvolutionAPI/evolution-manager-v2.git
-cd evolution-manager-v2
-
+git clone https://github.com/messageAPI/message-manager-v2.git
+cd Message-manager-v2
 # Install dependencies
 npm install
 
@@ -136,17 +145,17 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ```bash
 # Install globally
-npm install -g evolution-manager
+npm install -g message-manager
 
 # Or run directly
-npx evolution-manager
+npx message-manager
 ```
 
 ### Method 2: Docker
 
 ```bash
 # Pull and run
-docker run -p 3000:80 evolutionapi/evolution-manager:latest
+docker run -p 3000:80 messageapi/message-manager:latest
 
 # Or use docker-compose
 docker-compose up -d
@@ -156,9 +165,8 @@ docker-compose up -d
 
 ```bash
 # Clone repository
-git clone https://github.com/EvolutionAPI/evolution-manager-v2.git
-cd evolution-manager-v2
-
+git clone https://github.com/messageAPI/message-manager-v2.git
+cd Message-manager-v2
 # Install dependencies
 npm install
 
@@ -176,12 +184,12 @@ npm run preview
 Create a `.env` file in the root directory:
 
 ```env
-# Evolution API Configuration
-VITE_EVOLUTION_API_URL=http://localhost:8080
-VITE_EVOLUTION_API_KEY=your-api-key
+# Message API Configuration
+VITE_message_api_URL=http://localhost:8080
+VITE_message_api_KEY=your-api-key
 
 # Application Configuration
-VITE_APP_NAME="Evolution Manager"
+VITE_APP_NAME="Message Manager"
 VITE_APP_VERSION="2.0.0"
 
 # Optional: Custom Branding
@@ -194,7 +202,7 @@ VITE_GOOGLE_ANALYTICS_ID=GA_MEASUREMENT_ID
 
 ### API Connection
 
-The manager connects to your Evolution API instance. Configure the connection in the login screen or via environment variables.
+The manager connects to your Message API instance. Configure the connection in the login screen or via environment variables.
 
 ### Customization
 
@@ -253,39 +261,39 @@ src/
 ### Using Docker Compose
 
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
-  evolution-manager:
-    image: evolutionapi/evolution-manager:latest
+  message-manager:
+    image: messageapi/message-manager:latest
     ports:
       - "3000:80"
     environment:
-      - VITE_EVOLUTION_API_URL=http://evolution-api:8080
+      - VITE_message_api_URL=http://message-api:8080
     depends_on:
-      - evolution-api
+      - message-api
 ```
 
 ### Building Custom Image
 
 ```bash
 # Build image
-docker build -t my-evolution-manager .
+docker build -t my-message-manager .
 
 # Run container
-docker run -p 3000:80 my-evolution-manager
+docker run -p 3000:80 my-message-manager
 ```
 
 ## 🔌 API Integration
 
-### Connecting to Evolution API
+### Connecting to Message API
 
-1. **Login Screen**: Enter your Evolution API URL and credentials
-2. **Environment**: Set `VITE_EVOLUTION_API_URL` and `VITE_EVOLUTION_API_KEY`
+1. **Login Screen**: Enter your Message API URL and credentials
+2. **Environment**: Set `VITE_message_api_URL` and `VITE_message_api_KEY`
 3. **Runtime**: Configure via the settings page
 
 ### API Endpoints
 
-The manager uses the following Evolution API endpoints:
+The manager uses the following Message API endpoints:
 
 - `GET /instance` - List instances
 - `POST /instance` - Create instance
@@ -297,6 +305,7 @@ The manager uses the following Evolution API endpoints:
 ### Authentication
 
 Supports multiple authentication methods:
+
 - API Key authentication
 - JWT tokens
 - Instance-specific tokens
@@ -362,52 +371,56 @@ This project is licensed under the Apache License 2.0 with additional conditions
 
 ### Commercial Usage
 
-Evolution Manager can be used commercially, but please review the license conditions regarding:
+Message Manager can be used commercially, but please review the license conditions regarding:
+
 - Logo and copyright information
 - Usage notification requirements
 
-For commercial licensing inquiries, contact: contato@evolution-api.com
+For commercial licensing inquiries, contact: contato@message-api.com
 
 ## 🆘 Support
 
 ### Community Support
 
-- 💬 **Discord**: [Join our community](https://evolution-api.com/discord)
-- 📖 **Documentation**: [Official docs](https://doc.evolution-api.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/EvolutionAPI/evolution-manager-v2/issues)
+- 💬 **Discord**: [Join our community](https://message-api.com/discord)
+- 📖 **Documentation**: [Official docs](https://doc.message-api.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/messageAPI/message-manager-v2/issues)
 
 ### Professional Support
 
-- 📧 **Email**: contato@evolution-api.com
-- 🌐 **Website**: [evolution-api.com](https://evolution-api.com)
+- 📧 **Email**: contato@message-api.com
+- 🌐 **Website**: [message-api.com](https://message-api.com)
 - 💼 **Enterprise**: Custom solutions available
 
 ### FAQ
 
 <details>
-<summary>How do I connect to my Evolution API instance?</summary>
+<summary>How do I connect to my Message API instance?</summary>
 
-Use the login screen to enter your API URL and credentials, or set the `VITE_EVOLUTION_API_URL` environment variable.
+Use the login screen to enter your API URL and credentials, or set the `VITE_message_api_URL` environment variable.
+
 </details>
 
 <details>
 <summary>Can I customize the interface?</summary>
 
 Yes! You can modify themes, add languages, and customize components. See the [Configuration](#configuration) section.
+
 </details>
 
 <details>
-<summary>Is this compatible with Evolution API v1?</summary>
+<summary>Is this compatible with Message API v1?</summary>
 
-Evolution Manager v2 is designed for Evolution API v2+. For v1 compatibility, use Evolution Manager v1.
+Message Manager v2 is designed for Message API v2+. For v1 compatibility, use Message Manager v1.
+
 </details>
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the Evolution API Team**
+**Made with ❤️ by the Message API Team**
 
-[⭐ Star us on GitHub](https://github.com/EvolutionAPI/evolution-manager-v2) • [🐛 Report Issues](https://github.com/EvolutionAPI/evolution-manager-v2/issues) • [💬 Join Discord](https://evolution-api.com/discord)
+[⭐ Star us on GitHub](https://github.com/messageAPI/message-manager-v2) • [🐛 Report Issues](https://github.com/messageAPI/message-manager-v2/issues) • [💬 Join Discord](https://message-api.com/discord)
 
 </div>

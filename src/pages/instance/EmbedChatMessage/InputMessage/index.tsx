@@ -15,7 +15,7 @@ import { ReplyMessageContext } from "@/contexts/ReplyingMessage/ReplyingMessageC
 
 import { useSendMessage, useSendMedia, useSendAudio } from "@/lib/queries/chat/sendMessage";
 
-import { Contact, Instance } from "@/types/evolution.types";
+import { Contact, Instance } from "@/types/Evolution.types";
 
 import { MediaOptions } from "./media-options";
 import { ReplyingMessage } from "./replying-message";

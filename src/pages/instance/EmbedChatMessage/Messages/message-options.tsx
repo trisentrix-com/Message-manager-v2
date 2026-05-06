@@ -11,7 +11,7 @@ import { ReplyMessageContext } from "@/contexts/ReplyingMessage/ReplyingMessageC
 
 // Removed deleteMessage import - not available
 
-import { Message } from "@/types/evolution.types";
+import { Message } from "@/types/Evolution.types";
 
 const MessageOptions = ({ message, fromMe }: { message: Message; fromMe: boolean }) => {
   const { t } = useTranslation();

@@ -2,17 +2,17 @@
 
 ## Supported Versions
 
-We actively support the following versions of Evolution Manager with security updates:
+We actively support the following versions of Message Manager with security updates:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 2.x.x   | ✅ Yes             |
+| Version | Supported              |
+| ------- | ---------------------- |
+| 2.x.x   | ✅ Yes                 |
 | 1.x.x   | ⚠️ Critical fixes only |
-| < 1.0   | ❌ No              |
+| < 1.0   | ❌ No                  |
 
 ## Reporting a Vulnerability
 
-We take security vulnerabilities seriously. If you discover a security vulnerability in Evolution Manager, please help us by reporting it responsibly.
+We take security vulnerabilities seriously. If you discover a security vulnerability in Message Manager, please help us by reporting it responsibly.
 
 ### 🔒 Private Disclosure Process
 
@@ -20,7 +20,7 @@ We take security vulnerabilities seriously. If you discover a security vulnerabi
 
 Instead, please report security vulnerabilities by emailing us directly at:
 
-**📧 contato@evolution-api.com**
+**📧 contato@message-api.com**
 
 ### 📋 What to Include
 
@@ -29,7 +29,7 @@ When reporting a vulnerability, please include:
 1. **Description**: A clear description of the vulnerability
 2. **Steps to Reproduce**: Detailed steps to reproduce the issue
 3. **Impact**: What an attacker could achieve by exploiting this vulnerability
-4. **Affected Versions**: Which versions of Evolution Manager are affected
+4. **Affected Versions**: Which versions of Message Manager are affected
 5. **Proof of Concept**: If possible, include a proof of concept (but please be responsible)
 6. **Suggested Fix**: If you have ideas for how to fix the issue
 
@@ -43,7 +43,7 @@ We are committed to responding to security vulnerability reports in a timely man
 
 ### 🏆 Recognition
 
-We believe in recognizing security researchers who help make Evolution Manager safer:
+We believe in recognizing security researchers who help make Message Manager safer:
 
 - **Hall of Fame**: We maintain a security researchers hall of fame
 - **CVE Assignment**: For significant vulnerabilities, we'll work with you on CVE assignment
@@ -51,7 +51,7 @@ We believe in recognizing security researchers who help make Evolution Manager s
 
 ### 🛡️ Security Best Practices
 
-When using Evolution Manager, we recommend:
+When using Message Manager, we recommend:
 
 1. **Keep Updated**: Always use the latest supported version
 2. **Secure Configuration**: Follow our security configuration guidelines
@@ -83,10 +83,10 @@ This security policy is designed to be compatible with responsible security rese
 - Do not perform testing on production systems without permission
 - Do not engage in activities that could harm our users or services
 
-Thank you for helping keep Evolution Manager and our community safe! 🙏
+Thank you for helping keep Message Manager and our community safe! 🙏
 
 ---
 
-**Evolution Manager Security Team**
-📧 contato@evolution-api.com
-🌐 https://github.com/EvolutionAPI/evolution-manager-v2
+**Message Manager Security Team**
+📧 contato@message-api.com
+🌐 https://github.com/messageAPI/Message-manager-v2

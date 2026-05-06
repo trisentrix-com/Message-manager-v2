@@ -18,7 +18,7 @@ import { useFetchWebhook } from "@/lib/queries/webhook/fetchWebhook";
 import { useManageWebhook } from "@/lib/queries/webhook/manageWebhook";
 import { cn } from "@/lib/utils";
 
-import { Webhook as WebhookType } from "@/types/evolution.types";
+import { Webhook as WebhookType } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   enabled: z.boolean(),

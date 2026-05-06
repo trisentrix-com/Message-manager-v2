@@ -82,7 +82,7 @@
     "dify": "Dify",
     "n8n": "n8n",
     "evoai": "EvoAI",
-    "evolutionBot": "Evolution Bot",
+    "EvolutionBot": "message Bot",
     "flowise": "Flowise",
     "documentation": "Documentation",
     "postman": "Postman",
@@ -97,7 +97,7 @@
     }
   },
   "login": {
-    "title": "Evolution Manager",
+    "title": "Message Manager",
     "description": "Please enter your credentials to continue",
     "form": {
       "serverUrl": "Server URL",
@@ -123,7 +123,7 @@
         "whatsapp": "WhatsApp Cloud API",
         "facebook": "Facebook",
         "instagram": "Instagram",
-        "evolution": "Evolution"
+        "message": "message"
       },
       "token": "Token",
       "number": "Number",
@@ -1154,8 +1154,8 @@
       }
     }
   },
-  "evolutionBot": {
-    "title": "Evolution Bot",
+  "EvolutionBot": {
+    "title": "message Bot",
     "sessions": {
       "label": "Sessions",
       "search": "Search for remoteJid...",
@@ -1181,18 +1181,18 @@
         "error": "An error occurred while applying the default settings"
       },
       "success": {
-        "update": "Evolution Bot updated successfully",
-        "create": "Evolution Bot created successfully",
-        "delete": "Evolution Bot deleted successfully",
-        "status": "Evolution Bot status updated successfully"
+        "update": "message Bot updated successfully",
+        "create": "message Bot created successfully",
+        "delete": "message Bot deleted successfully",
+        "status": "message Bot status updated successfully"
       },
-      "error": "An error occurred while creating the Evolution Bot"
+      "error": "An error occurred while creating the message Bot"
     },
     "table": {
       "none": "Nothing to show"
     },
     "form": {
-      "title": "New Evolution Bot",
+      "title": "New message Bot",
       "examples": {
         "keywordFinish": "#FINISH",
         "unknownMessage": "I'm sorry, I didn't understand. Can you try again?"
@@ -1203,8 +1203,8 @@
       "description": {
         "label": "Description"
       },
-      "evolutionBotSettings": {
-        "label": "Evolution Bot Settings"
+      "EvolutionBotSettings": {
+        "label": "message Bot Settings"
       },
       "apiUrl": {
         "label": "API URL"
@@ -1237,7 +1237,7 @@
         "label": "Conditions"
       },
       "botIdFallback": {
-        "label": "Evolution Bot Fallback"
+        "label": "message Bot Fallback"
       },
       "generalSettings": {
         "label": "General Settings"
@@ -1282,7 +1282,7 @@
       }
     },
     "button": {
-      "create": "Evolution Bot",
+      "create": "message Bot",
       "save": "Save",
       "saving": "Saving...",
       "update": "Update",

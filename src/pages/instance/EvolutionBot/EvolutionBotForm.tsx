@@ -37,7 +37,7 @@ type EvolutionBotFormProps = {
   initialData?: FormSchemaType;
   onSubmit: (data: FormSchemaType) => Promise<void>;
   handleDelete?: () => void;
-  evolutionBotId?: string;
+  EvolutionBotId?: string;
   isModal?: boolean;
   isLoading?: boolean;
   openDeletionDialog?: boolean;
@@ -48,7 +48,7 @@ function EvolutionBotForm({
   initialData,
   onSubmit,
   handleDelete,
-  evolutionBotId,
+  EvolutionBotId,
   isModal = false,
   isLoading = false,
   openDeletionDialog = false,
@@ -84,44 +84,44 @@ function EvolutionBotForm({
     <FormProvider {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
         <div className="space-y-4">
-          <FormSwitch name="enabled" label={t("evolutionBot.form.enabled.label")} reverse />
-          <FormInput name="description" label={t("evolutionBot.form.description.label")} required>
+          <FormSwitch name="enabled" label={t("EvolutionBot.form.enabled.label")} reverse />
+          <FormInput name="description" label={t("EvolutionBot.form.description.label")} required>
             <Input />
           </FormInput>
 
           <div className="flex flex-col">
-            <h3 className="my-4 text-lg font-medium">{t("evolutionBot.form.evolutionBotSettings.label")}</h3>
+            <h3 className="my-4 text-lg font-medium">{t("EvolutionBot.form.EvolutionBotSettings.label")}</h3>
             <Separator />
           </div>
-          <FormInput name="apiUrl" label={t("evolutionBot.form.apiUrl.label")} required>
+          <FormInput name="apiUrl" label={t("EvolutionBot.form.apiUrl.label")} required>
             <Input />
           </FormInput>
-          <FormInput name="apiKey" label={t("evolutionBot.form.apiKey.label")}>
+          <FormInput name="apiKey" label={t("EvolutionBot.form.apiKey.label")}>
             <Input type="password" />
           </FormInput>
 
           <div className="flex flex-col">
-            <h3 className="my-4 text-lg font-medium">{t("evolutionBot.form.triggerSettings.label")}</h3>
+            <h3 className="my-4 text-lg font-medium">{t("EvolutionBot.form.triggerSettings.label")}</h3>
             <Separator />
           </div>
           <FormSelect
             name="triggerType"
-            label={t("evolutionBot.form.triggerType.label")}
+            label={t("EvolutionBot.form.triggerType.label")}
             options={[
               {
-                label: t("evolutionBot.form.triggerType.keyword"),
+                label: t("EvolutionBot.form.triggerType.keyword"),
                 value: "keyword",
               },
               {
-                label: t("evolutionBot.form.triggerType.all"),
+                label: t("EvolutionBot.form.triggerType.all"),
                 value: "all",
               },
               {
-                label: t("evolutionBot.form.triggerType.advanced"),
+                label: t("EvolutionBot.form.triggerType.advanced"),
                 value: "advanced",
               },
               {
-                label: t("evolutionBot.form.triggerType.none"),
+                label: t("EvolutionBot.form.triggerType.none"),
                 value: "none",
               },
             ]}
@@ -131,67 +131,67 @@ function EvolutionBotForm({
             <>
               <FormSelect
                 name="triggerOperator"
-                label={t("evolutionBot.form.triggerOperator.label")}
+                label={t("EvolutionBot.form.triggerOperator.label")}
                 options={[
                   {
-                    label: t("evolutionBot.form.triggerOperator.contains"),
+                    label: t("EvolutionBot.form.triggerOperator.contains"),
                     value: "contains",
                   },
                   {
-                    label: t("evolutionBot.form.triggerOperator.equals"),
+                    label: t("EvolutionBot.form.triggerOperator.equals"),
                     value: "equals",
                   },
                   {
-                    label: t("evolutionBot.form.triggerOperator.startsWith"),
+                    label: t("EvolutionBot.form.triggerOperator.startsWith"),
                     value: "startsWith",
                   },
                   {
-                    label: t("evolutionBot.form.triggerOperator.endsWith"),
+                    label: t("EvolutionBot.form.triggerOperator.endsWith"),
                     value: "endsWith",
                   },
                   {
-                    label: t("evolutionBot.form.triggerOperator.regex"),
+                    label: t("EvolutionBot.form.triggerOperator.regex"),
                     value: "regex",
                   },
                 ]}
               />
-              <FormInput name="triggerValue" label={t("evolutionBot.form.triggerValue.label")}>
+              <FormInput name="triggerValue" label={t("EvolutionBot.form.triggerValue.label")}>
                 <Input />
               </FormInput>
             </>
           )}
           {triggerType === "advanced" && (
-            <FormInput name="triggerValue" label={t("evolutionBot.form.triggerConditions.label")}>
+            <FormInput name="triggerValue" label={t("EvolutionBot.form.triggerConditions.label")}>
               <Input />
             </FormInput>
           )}
           <div className="flex flex-col">
-            <h3 className="my-4 text-lg font-medium">{t("evolutionBot.form.generalSettings.label")}</h3>
+            <h3 className="my-4 text-lg font-medium">{t("EvolutionBot.form.generalSettings.label")}</h3>
             <Separator />
           </div>
-          <FormInput name="expire" label={t("evolutionBot.form.expire.label")}>
+          <FormInput name="expire" label={t("EvolutionBot.form.expire.label")}>
             <Input type="number" />
           </FormInput>
-          <FormInput name="keywordFinish" label={t("evolutionBot.form.keywordFinish.label")}>
+          <FormInput name="keywordFinish" label={t("EvolutionBot.form.keywordFinish.label")}>
             <Input />
           </FormInput>
-          <FormInput name="delayMessage" label={t("evolutionBot.form.delayMessage.label")}>
+          <FormInput name="delayMessage" label={t("EvolutionBot.form.delayMessage.label")}>
             <Input type="number" />
           </FormInput>
-          <FormInput name="unknownMessage" label={t("evolutionBot.form.unknownMessage.label")}>
+          <FormInput name="unknownMessage" label={t("EvolutionBot.form.unknownMessage.label")}>
             <Input />
           </FormInput>
-          <FormSwitch name="listeningFromMe" label={t("evolutionBot.form.listeningFromMe.label")} reverse />
-          <FormSwitch name="stopBotFromMe" label={t("evolutionBot.form.stopBotFromMe.label")} reverse />
-          <FormSwitch name="keepOpen" label={t("evolutionBot.form.keepOpen.label")} reverse />
-          <FormInput name="debounceTime" label={t("evolutionBot.form.debounceTime.label")}>
+          <FormSwitch name="listeningFromMe" label={t("EvolutionBot.form.listeningFromMe.label")} reverse />
+          <FormSwitch name="stopBotFromMe" label={t("EvolutionBot.form.stopBotFromMe.label")} reverse />
+          <FormSwitch name="keepOpen" label={t("EvolutionBot.form.keepOpen.label")} reverse />
+          <FormInput name="debounceTime" label={t("EvolutionBot.form.debounceTime.label")}>
             <Input type="number" />
           </FormInput>
 
-          <FormSwitch name="splitMessages" label={t("evolutionBot.form.splitMessages.label")} reverse />
+          <FormSwitch name="splitMessages" label={t("EvolutionBot.form.splitMessages.label")} reverse />
 
           {form.watch("splitMessages") && (
-            <FormInput name="timePerChar" label={t("evolutionBot.form.timePerChar.label")}>
+            <FormInput name="timePerChar" label={t("EvolutionBot.form.timePerChar.label")}>
               <Input type="number" />
             </FormInput>
           )}
@@ -200,14 +200,14 @@ function EvolutionBotForm({
         {isModal && (
           <DialogFooter>
             <Button disabled={isLoading} type="submit">
-              {isLoading ? t("evolutionBot.button.saving") : t("evolutionBot.button.save")}
+              {isLoading ? t("EvolutionBot.button.saving") : t("EvolutionBot.button.save")}
             </Button>
           </DialogFooter>
         )}
 
         {!isModal && (
           <div>
-            <SessionsEvolutionBot evolutionBotId={evolutionBotId} />
+            <SessionsEvolutionBot EvolutionBotId={EvolutionBotId} />
             <div className="mt-5 flex items-center gap-3">
               <Dialog open={openDeletionDialog} onOpenChange={setOpenDeletionDialog}>
                 <DialogTrigger asChild>
@@ -231,7 +231,7 @@ function EvolutionBotForm({
                 </DialogContent>
               </Dialog>
               <Button disabled={isLoading} type="submit">
-                {isLoading ? t("evolutionBot.button.saving") : t("evolutionBot.button.update")}
+                {isLoading ? t("EvolutionBot.button.saving") : t("EvolutionBot.button.update")}
               </Button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 
-import { Message } from "@/types/evolution.types";
+import { Message } from "@/types/Evolution.types";
 
 interface ReplyMessageContextData {
   replyingMessage: Message | null;

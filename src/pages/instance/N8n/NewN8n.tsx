@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 
 import { useManageN8n } from "@/lib/queries/n8n/manageN8n";
 
-import { N8n } from "@/types/evolution.types";
+import { N8n } from "@/types/Evolution.types";
 
 import { FormSchemaType, N8nForm } from "./N8nForm";
 

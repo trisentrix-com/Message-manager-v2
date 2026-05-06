@@ -6,7 +6,6 @@ import QRCode from "react-qr-code";
 
 import { InstanceStatus } from "@/components/instance-status";
 import { InstanceToken } from "@/components/instance-token";
-import { useTheme } from "@/components/theme-provider";
 import { Alert, AlertTitle } from "@/components/ui/alert";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,6 @@ function DashboardInstance() {
   const [qrCode, setQRCode] = useState<string | null>(null);
   const [pairingCode, setPairingCode] = useState("");
   const token = getToken(TOKEN_ID.TOKEN);
-  const { theme } = useTheme();
 
   const { connect, logout, restart } = useManageInstance();
   const { instance, reloadInstance } = useInstance();
@@ -80,7 +78,13 @@ function DashboardInstance() {
       } else {
         const data = await connect({ instanceName, token });
 
-        setQRCode(data.code);
+        setQRCode(
+          data.code ||
+          data.qrcode ||
+          data.base64 ||
+          data.qr ||
+          ""
+        );
       }
     } catch (error) {
       console.error("Error:", error);
@@ -108,16 +112,6 @@ function DashboardInstance() {
       messages: instance._count?.Message || 0,
     };
   }, [instance]);
-
-  const qrCodeColor = useMemo(() => {
-    if (theme === "dark") {
-      return "#fff";
-    }
-    if (theme === "light") {
-      return "#000";
-    }
-    return "#189d68";
-  }, [theme]);
 
   if (!instance) {
     return <LoadingSpinner />;
@@ -159,7 +153,28 @@ function DashboardInstance() {
                   </DialogTrigger>
                   <DialogContent onCloseAutoFocus={closeQRCodePopup}>
                     <DialogHeader>{t("instance.dashboard.button.qrcode.title")}</DialogHeader>
-                    <div className="flex items-center justify-center">{qrCode && <QRCode value={qrCode} size={256} bgColor="transparent" fgColor={qrCodeColor} className="rounded-sm" />}</div>
+                    <div className="flex items-center justify-center min-h-[280px]">
+                      {qrCode ? (
+                        qrCode.startsWith("data:image") ? (
+                          <img
+                            src={qrCode}
+                            alt="QR Code"
+                            className="w-64 h-64 bg-white p-2 rounded-sm"
+                          />
+                        ) : (
+                          <div className="bg-white p-2 rounded-sm">
+                            <QRCode
+                              value={qrCode}
+                              size={256}
+                              bgColor="#ffffff"
+                              fgColor="#000000"
+                            />
+                          </div>
+                        )
+                      ) : (
+                        <LoadingSpinner />
+                      )}
+                    </div>
                   </DialogContent>
                 </Dialog>
 

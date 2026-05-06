@@ -18,7 +18,7 @@ import { useFindDefaultSettingsTypebot } from "@/lib/queries/typebot/findDefault
 import { useFindTypebot } from "@/lib/queries/typebot/findTypebot";
 import { useManageTypebot } from "@/lib/queries/typebot/manageTypebot";
 
-import { TypebotSettings } from "@/types/evolution.types";
+import { TypebotSettings } from "@/types/Evolution.types";
 
 const formSchema = z.object({
   expire: z.coerce.number(),

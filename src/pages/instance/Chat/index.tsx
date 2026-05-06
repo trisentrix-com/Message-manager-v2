@@ -13,7 +13,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFindChats } from "@/lib/queries/chat/findChats";
 import { getToken, TOKEN_ID } from "@/lib/queries/token";
 
-import { Chat as ChatType } from "@/types/evolution.types";
+import { Chat as ChatType } from "@/types/Evolution.types";
 
 import React from "react";
 import { useMediaQuery } from "@/utils/useMediaQuery";

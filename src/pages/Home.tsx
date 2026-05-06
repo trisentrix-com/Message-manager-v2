@@ -20,11 +20,7 @@ export default function Home() {
       {/* Header with theme toggle */}
       <header className="flex items-center justify-between px-4 py-2">
         <div className="flex items-center">
-          <img
-            src={theme === "dark" ? "https://evolution-api.com/files/evo/evolution-logo-white.svg" : "https://evolution-api.com/files/evo/evolution-logo.svg"}
-            alt="Evolution API Logo"
-            className="h-8"
-          />
+          <img src={theme === "dark" ? `${import.meta.env.BASE_URL}logo-white.png` : `${import.meta.env.BASE_URL}logo.png`} alt="Message API Logo" className="h-8" />
         </div>
         <div className="flex items-center gap-4">
           <LanguageToggle />
@@ -37,20 +33,12 @@ export default function Home() {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-6">
-              <img
-                src={theme === "dark" ? "https://evolution-api.com/files/evo/evolution-logo-white.svg" : "https://evolution-api.com/files/evo/evolution-logo.svg"}
-                alt="Evolution Manager Logo"
-                className="h-10"
-              />
+              <img src={theme === "dark" ? `${import.meta.env.BASE_URL}logo-white.png` : `${import.meta.env.BASE_URL}logo.png`} alt="Message Manager Logo" className="h-10" />
             </div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">
-              Evolution Manager v2
-            </h1>
-            <p className="text-xl text-muted-foreground mb-6">
-              Modern web interface for Evolution API management
-            </p>
+            <h1 className="text-4xl font-bold text-foreground mb-4">Message Manager v2</h1>
+            <p className="text-xl text-muted-foreground mb-6">Modern web interface for Message API management</p>
             <Badge variant="secondary" className="text-sm px-3 py-1">
-              Version 2.0.0
+              Version 2.3.7
             </Badge>
           </div>
 
@@ -59,20 +47,14 @@ export default function Home() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-primary" />
-                Welcome to Evolution Manager
+                Welcome to Message Manager
               </CardTitle>
-              <CardDescription>
-                A powerful, modern dashboard for managing your WhatsApp API instances with Evolution API
-              </CardDescription>
+              <CardDescription>A powerful, modern dashboard for managing your WhatsApp API instances with Message API</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="pt-6 border-t border-border">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <Button
-                    onClick={handleGoToManager}
-                    size="lg"
-                    className="px-8 py-3"
-                  >
+                  <Button onClick={handleGoToManager} size="lg" className="px-8 py-3">
                     Access Manager Dashboard
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -85,18 +67,15 @@ export default function Home() {
           <Card>
             <CardHeader>
               <CardTitle>Resources & Support</CardTitle>
-              <CardDescription>
-                Get help, contribute, or learn more about Evolution API
-              </CardDescription>
+              <CardDescription>Get help, contribute, or learn more about Message API</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-3 gap-4">
                 <a
-                  href="https://github.com/EvolutionAPI/evolution-manager-v2"
+                  href="https://github.com/messageapi/Message-manager-v2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
-                >
+                  className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors">
                   <Github className="w-5 h-5 text-muted-foreground" />
                   <div>
                     <div className="font-medium text-foreground">GitHub</div>
@@ -104,12 +83,7 @@ export default function Home() {
                   </div>
                 </a>
 
-                <a
-                  href="https://evolution-api.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
-                >
+                <a href="https://message-api.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors">
                   <Globe className="w-5 h-5 text-muted-foreground" />
                   <div>
                     <div className="font-medium text-foreground">Website</div>
@@ -117,10 +91,7 @@ export default function Home() {
                   </div>
                 </a>
 
-                <a
-                  href="mailto:contato@evolution-api.com"
-                  className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors"
-                >
+                <a href="mailto:contato@message-api.com" className="flex items-center gap-3 p-4 rounded-lg border border-border hover:bg-accent transition-colors">
                   <Mail className="w-5 h-5 text-muted-foreground" />
                   <div>
                     <div className="font-medium text-foreground">Contact</div>
@@ -133,7 +104,7 @@ export default function Home() {
 
           {/* Footer */}
           <div className="text-center mt-12 text-sm text-muted-foreground">
-            <p>© 2025 Evolution API. Licensed under Apache 2.0 with Evolution API custom conditions.</p>
+            <p>© 2025 Message API. Licensed under Apache 2.0 with Message API custom conditions.</p>
           </div>
         </div>
       </div>

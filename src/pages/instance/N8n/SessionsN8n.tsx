@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsN8n } from "@/lib/queries/n8n/fetchSessionsN8n";
 import { useManageN8n } from "@/lib/queries/n8n/manageN8n";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsN8n({ n8nId }: { n8nId?: string }) {
   const { t } = useTranslation();

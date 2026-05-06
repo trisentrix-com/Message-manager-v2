@@ -1,4 +1,4 @@
-import { EvolutionBot, EvolutionBotSettings } from "@/types/evolution.types";
+import { EvolutionBot, EvolutionBotSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";
@@ -10,16 +10,16 @@ interface CreateEvolutionBotParams {
 }
 
 const createEvolutionBot = async ({ instanceName, token, data }: CreateEvolutionBotParams) => {
-  const response = await api.post(`/evolutionBot/create/${instanceName}`, data, { headers: { apikey: token } });
+  const response = await api.post(`/EvolutionBot/create/${instanceName}`, data, { headers: { apikey: token } });
   return response.data;
 };
 
 interface UpdateEvolutionBotParams extends CreateEvolutionBotParams {
-  evolutionBotId: string;
+  EvolutionBotId: string;
 }
 
-const updateEvolutionBot = async ({ instanceName, token, evolutionBotId, data }: UpdateEvolutionBotParams) => {
-  const response = await api.put(`/evolutionBot/update/${evolutionBotId}/${instanceName}`, data, {
+const updateEvolutionBot = async ({ instanceName, token, EvolutionBotId, data }: UpdateEvolutionBotParams) => {
+  const response = await api.put(`/EvolutionBot/update/${EvolutionBotId}/${instanceName}`, data, {
     headers: { apikey: token },
   });
   return response.data;
@@ -27,10 +27,10 @@ const updateEvolutionBot = async ({ instanceName, token, evolutionBotId, data }:
 
 interface DeleteEvolutionBotParams {
   instanceName: string;
-  evolutionBotId: string;
+  EvolutionBotId: string;
 }
-const deleteEvolutionBot = async ({ instanceName, evolutionBotId }: DeleteEvolutionBotParams) => {
-  const response = await api.delete(`/evolutionBot/delete/${evolutionBotId}/${instanceName}`);
+const deleteEvolutionBot = async ({ instanceName, EvolutionBotId }: DeleteEvolutionBotParams) => {
+  const response = await api.delete(`/EvolutionBot/delete/${EvolutionBotId}/${instanceName}`);
   return response.data;
 };
 
@@ -40,7 +40,7 @@ interface SetDefaultSettingsEvolutionBotParams {
   data: EvolutionBotSettings;
 }
 const setDefaultSettingsEvolutionBot = async ({ instanceName, token, data }: SetDefaultSettingsEvolutionBotParams) => {
-  const response = await api.post(`/evolutionBot/settings/${instanceName}`, data, { headers: { apikey: token } });
+  const response = await api.post(`/EvolutionBot/settings/${instanceName}`, data, { headers: { apikey: token } });
   return response.data;
 };
 
@@ -52,7 +52,7 @@ interface ChangeStatusEvolutionBotParams {
 }
 const changeStatusEvolutionBot = async ({ instanceName, token, remoteJid, status }: ChangeStatusEvolutionBotParams) => {
   const response = await api.post(
-    `/evolutionBot/changeStatus/${instanceName}`,
+    `/EvolutionBot/changeStatus/${instanceName}`,
     {
       remoteJid,
       status,
@@ -64,30 +64,30 @@ const changeStatusEvolutionBot = async ({ instanceName, token, remoteJid, status
 
 export function useManageEvolutionBot() {
   const setDefaultSettingsEvolutionBotMutation = useManageMutation(setDefaultSettingsEvolutionBot, {
-    invalidateKeys: [["evolutionBot", "fetchDefaultSettings"]],
+    invalidateKeys: [["EvolutionBot", "fetchDefaultSettings"]],
   });
   const changeStatusEvolutionBotMutation = useManageMutation(changeStatusEvolutionBot, {
     invalidateKeys: [
-      ["evolutionBot", "getEvolutionBot"],
-      ["evolutionBot", "fetchSessions"],
+      ["EvolutionBot", "getEvolutionBot"],
+      ["EvolutionBot", "fetchSessions"],
     ],
   });
   const deleteEvolutionBotMutation = useManageMutation(deleteEvolutionBot, {
     invalidateKeys: [
-      ["evolutionBot", "getEvolutionBot"],
-      ["evolutionBot", "findEvolutionBot"],
-      ["evolutionBot", "fetchSessions"],
+      ["EvolutionBot", "getEvolutionBot"],
+      ["EvolutionBot", "findEvolutionBot"],
+      ["EvolutionBot", "fetchSessions"],
     ],
   });
   const updateEvolutionBotMutation = useManageMutation(updateEvolutionBot, {
     invalidateKeys: [
-      ["evolutionBot", "getEvolutionBot"],
-      ["evolutionBot", "findEvolutionBot"],
-      ["evolutionBot", "fetchSessions"],
+      ["EvolutionBot", "getEvolutionBot"],
+      ["EvolutionBot", "findEvolutionBot"],
+      ["EvolutionBot", "fetchSessions"],
     ],
   });
   const createEvolutionBotMutation = useManageMutation(createEvolutionBot, {
-    invalidateKeys: [["evolutionBot", "findEvolutionBot"]],
+    invalidateKeys: [["EvolutionBot", "findEvolutionBot"]],
   });
 
   return {

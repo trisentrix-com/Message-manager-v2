@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 // Removed tooltip import - not available in project
 
-import { Message, Chat } from "@/types/evolution.types";
+import { Message, Chat } from "@/types/Evolution.types";
 
 // Removed contact-colors import - using simple color logic
 

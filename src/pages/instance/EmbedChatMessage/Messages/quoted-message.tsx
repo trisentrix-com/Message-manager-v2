@@ -3,7 +3,7 @@ import { ImageIcon, VideoIcon, MicIcon, FileIcon, UserIcon, MapPinIcon } from "l
 
 import { useEmbedColors } from "@/contexts/EmbedColorsContext";
 
-import { Chat, Message } from "@/types/evolution.types";
+import { Chat, Message } from "@/types/Evolution.types";
 
 // Removed contact-colors import - using simple color logic
 

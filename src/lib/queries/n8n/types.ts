@@ -1,4 +1,4 @@
-import { IntegrationSession, N8n, N8nSettings } from "@/types/evolution.types";
+import { IntegrationSession, N8n, N8nSettings } from "@/types/Evolution.types";
 
 export type FetchN8nRsponse = N8n[];
 

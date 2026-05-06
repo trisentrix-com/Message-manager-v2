@@ -19,7 +19,7 @@ import { useFindOpenai } from "@/lib/queries/openai/findOpenai";
 import { useFindOpenaiCreds } from "@/lib/queries/openai/findOpenaiCreds";
 import { useManageOpenai } from "@/lib/queries/openai/manageOpenai";
 
-import { OpenaiSettings } from "@/types/evolution.types";
+import { OpenaiSettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   openaiCredsId: z.string(),

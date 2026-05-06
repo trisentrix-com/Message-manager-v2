@@ -1,4 +1,4 @@
-import { Flowise, FlowiseSettings, IntegrationSession } from "@/types/evolution.types";
+import { Flowise, FlowiseSettings, IntegrationSession } from "@/types/Evolution.types";
 
 export type FindFlowiseResponse = Flowise[];
 

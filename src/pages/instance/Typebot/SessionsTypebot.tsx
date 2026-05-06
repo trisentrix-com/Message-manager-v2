@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsTypebot } from "@/lib/queries/typebot/fetchSessionsTypebot";
 import { useManageTypebot } from "@/lib/queries/typebot/manageTypebot";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsTypebot({ typebotId }: { typebotId?: string }) {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import { Openai, OpenaiCreds, OpenaiSettings } from "@/types/evolution.types";
+import { Openai, OpenaiCreds, OpenaiSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

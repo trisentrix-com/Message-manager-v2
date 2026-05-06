@@ -1,4 +1,4 @@
-import { Rabbitmq } from "@/types/evolution.types";
+import { Rabbitmq } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

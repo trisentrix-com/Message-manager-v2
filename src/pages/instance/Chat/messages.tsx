@@ -15,7 +15,7 @@ import { useFindMessages } from "@/lib/queries/chat/findMessages";
 import { useSendMessage, useSendMedia } from "@/lib/queries/chat/sendMessage";
 import { getToken, TOKEN_ID } from "@/lib/queries/token";
 
-import { Message } from "@/types/evolution.types";
+import { Message } from "@/types/Evolution.types";
 
 import { connectSocket, disconnectSocket } from "@/services/websocket/socket";
 

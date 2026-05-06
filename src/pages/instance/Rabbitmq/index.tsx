@@ -17,7 +17,7 @@ import { useFetchRabbitmq } from "@/lib/queries/rabbitmq/fetchRabbitmq";
 import { useManageRabbitmq } from "@/lib/queries/rabbitmq/manageRabbitmq";
 import { cn } from "@/lib/utils";
 
-import { Rabbitmq as RabbitmqType } from "@/types/evolution.types";
+import { Rabbitmq as RabbitmqType } from "@/types/Evolution.types";
 
 const formSchema = z.object({
   enabled: z.boolean(),

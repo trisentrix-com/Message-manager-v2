@@ -1,4 +1,4 @@
-import { Chatwoot } from "@/types/evolution.types";
+import { Chatwoot } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

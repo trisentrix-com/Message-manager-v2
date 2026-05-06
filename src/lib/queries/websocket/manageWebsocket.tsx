@@ -1,4 +1,4 @@
-import { Websocket } from "@/types/evolution.types";
+import { Websocket } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

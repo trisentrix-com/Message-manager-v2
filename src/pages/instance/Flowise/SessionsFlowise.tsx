@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsFlowise } from "@/lib/queries/flowise/fetchSessionsFlowise";
 import { useManageFlowise } from "@/lib/queries/flowise/manageFlowise";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsFlowise({ flowiseId }: { flowiseId?: string }) {
   const { t } = useTranslation();

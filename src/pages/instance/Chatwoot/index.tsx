@@ -19,7 +19,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchChatwoot } from "@/lib/queries/chatwoot/fetchChatwoot";
 import { useManageChatwoot } from "@/lib/queries/chatwoot/manageChatwoot";
 
-import { Chatwoot as ChatwootType } from "@/types/evolution.types";
+import { Chatwoot as ChatwootType } from "@/types/Evolution.types";
 
 const stringOrUndefined = z
   .string()

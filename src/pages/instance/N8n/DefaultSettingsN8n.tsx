@@ -18,7 +18,7 @@ import { useFetchN8n } from "@/lib/queries/n8n/fetchN8n";
 import { useManageN8n } from "@/lib/queries/n8n/manageN8n";
 import { useFetchDefaultSettings } from "@/lib/queries/n8n/settingsFind";
 
-import { N8nSettings } from "@/types/evolution.types";
+import { N8nSettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   expire: z.string(),

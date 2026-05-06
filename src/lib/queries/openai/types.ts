@@ -1,4 +1,4 @@
-import { Openai, OpenaiSettings, IntegrationSession, ModelOpenai, OpenaiCreds } from "@/types/evolution.types";
+import { Openai, OpenaiSettings, IntegrationSession, ModelOpenai, OpenaiCreds } from "@/types/Evolution.types";
 
 export type FindOpenaiResponse = Openai[];
 

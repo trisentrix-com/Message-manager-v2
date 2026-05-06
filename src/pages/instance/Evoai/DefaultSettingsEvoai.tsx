@@ -18,7 +18,7 @@ import { useFetchEvoai } from "@/lib/queries/evoai/fetchEvoai";
 import { useManageEvoai } from "@/lib/queries/evoai/manageEvoai";
 import { useFetchDefaultSettings } from "@/lib/queries/evoai/settingsFind";
 
-import { EvoaiSettings } from "@/types/evolution.types";
+import { EvoaiSettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   expire: z.string(),

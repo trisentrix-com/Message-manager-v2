@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 
 import { TOKEN_ID } from "@/lib/queries/token";
 
-import { Instance } from "@/types/evolution.types";
+import { Instance } from "@/types/Evolution.types";
 
 interface EmbedInstanceContextType {
   instance: Instance | null;

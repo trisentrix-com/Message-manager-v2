@@ -2,7 +2,7 @@ import { FileIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import { Message } from "@/types/evolution.types";
+import { Message } from "@/types/Evolution.types";
 
 import { AudioPlayer } from "./audio-player";
 import { ContactMessage } from "./contact-message";

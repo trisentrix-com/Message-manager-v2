@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useGetEvoai } from "@/lib/queries/evoai/getEvoai";
 import { useManageEvoai } from "@/lib/queries/evoai/manageEvoai";
 
-import { Evoai } from "@/types/evolution.types";
+import { Evoai } from "@/types/Evolution.types";
 
 import { EvoaiForm, FormSchemaType } from "./EvoaiForm";
 

@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 
 import { useManageDify } from "@/lib/queries/dify/manageDify";
 
-import { Dify } from "@/types/evolution.types";
+import { Dify } from "@/types/Evolution.types";
 
 import { FormSchemaType, DifyForm } from "./DifyForm";
 

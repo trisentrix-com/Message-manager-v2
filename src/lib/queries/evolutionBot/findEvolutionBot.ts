@@ -9,10 +9,10 @@ interface IParams {
   token?: string | null;
 }
 
-const queryKey = (params: Partial<IParams>) => ["evolutionBot", "findEvolutionBot", JSON.stringify(params)];
+const queryKey = (params: Partial<IParams>) => ["EvolutionBot", "findEvolutionBot", JSON.stringify(params)];
 
 export const findEvolutionBot = async ({ instanceName, token }: IParams) => {
-  const response = await api.get(`/evolutionBot/find/${instanceName}`, {
+  const response = await api.get(`/EvolutionBot/find/${instanceName}`, {
     headers: { apiKey: token },
   });
   return response.data;

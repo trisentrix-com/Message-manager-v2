@@ -1,4 +1,4 @@
-import { Proxy } from "@/types/evolution.types";
+import { Proxy } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

@@ -11,7 +11,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 
 import { useManageTypebot } from "@/lib/queries/typebot/manageTypebot";
 
-import { Typebot } from "@/types/evolution.types";
+import { Typebot } from "@/types/Evolution.types";
 
 import { FormSchemaType, TypebotForm } from "./TypebotForm";
 

@@ -1,5 +1,5 @@
 name: 🐛 Bug Report
-description: Report a bug or issue with Evolution Manager
+description: Report a bug or issue with Message Manager
 title: "[Bug]: "
 labels: ["bug", "needs-triage"]
 assignees: []
@@ -18,9 +18,9 @@ body:
       options:
         - label: I have searched existing issues to ensure this bug hasn't been reported before
           required: true
-        - label: I have read the [documentation](https://doc.evolution-api.com)
+        - label: I have read the [documentation](https://doc.message-api.com)
           required: true
-        - label: I am using a supported version of Evolution Manager
+        - label: I am using a supported version of Message Manager
           required: true
 
   - type: textarea
@@ -96,8 +96,8 @@ body:
   - type: input
     id: manager-version
     attributes:
-      label: Evolution Manager Version
-      description: What version of Evolution Manager are you using?
+      label: Message Manager Version
+      description: What version of Message Manager are you using?
       placeholder: e.g., v2.0.0
     validations:
       required: true
@@ -105,8 +105,8 @@ body:
   - type: input
     id: api-version
     attributes:
-      label: Evolution API Version
-      description: What version of Evolution API are you connecting to?
+      label: Message API Version
+      description: What version of Message API are you connecting to?
       placeholder: e.g., v2.3.3
     validations:
       required: true

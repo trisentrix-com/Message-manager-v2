@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsOpenai } from "@/lib/queries/openai/fetchSessionsOpenai";
 import { useManageOpenai } from "@/lib/queries/openai/manageOpenai";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsOpenai({ openaiId }: { openaiId?: string }) {
   const { t } = useTranslation();

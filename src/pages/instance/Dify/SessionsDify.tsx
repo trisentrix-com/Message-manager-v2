@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchSessionsDify } from "@/lib/queries/dify/fetchSessionsDify";
 import { useManageDify } from "@/lib/queries/dify/manageDify";
 
-import { IntegrationSession } from "@/types/evolution.types";
+import { IntegrationSession } from "@/types/Evolution.types";
 
 function SessionsDify({ difyId }: { difyId?: string }) {
   const { t } = useTranslation();

@@ -1,4 +1,4 @@
-import { Typebot, TypebotSettings } from "@/types/evolution.types";
+import { Typebot, TypebotSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

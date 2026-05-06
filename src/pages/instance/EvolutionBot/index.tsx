@@ -23,7 +23,7 @@ function EvolutionBot() {
   const isMD = useMediaQuery("(min-width: 768px)");
   const { instance } = useInstance();
 
-  const { evolutionBotId } = useParams<{ evolutionBotId: string }>();
+  const { EvolutionBotId } = useParams<{ EvolutionBotId: string }>();
 
   const {
     data: bots,
@@ -38,7 +38,7 @@ function EvolutionBot() {
   const handleBotClick = (botId: string) => {
     if (!instance) return;
 
-    navigate(`/manager/instance/${instance.id}/evolutionBot/${botId}`);
+    navigate(`/manager/instance/${instance.id}/EvolutionBot/${botId}`);
   };
 
   const resetTable = () => {
@@ -48,7 +48,7 @@ function EvolutionBot() {
   return (
     <main className="pt-5">
       <div className="mb-1 flex items-center justify-between">
-        <h3 className="text-lg font-medium">{t("evolutionBot.title")}</h3>
+        <h3 className="text-lg font-medium">{t("EvolutionBot.title")}</h3>
         <div className="flex items-center justify-end gap-2">
           <SessionsEvolutionBot />
           <DefaultSettingsEvolutionBot />
@@ -69,22 +69,22 @@ function EvolutionBot() {
                       className="flex h-auto flex-col items-start justify-start"
                       key={bot.id}
                       onClick={() => handleBotClick(`${bot.id}`)}
-                      variant={evolutionBotId === bot.id ? "secondary" : "outline"}>
+                      variant={EvolutionBotId === bot.id ? "secondary" : "outline"}>
                       <h4 className="text-base">{bot.description || bot.id}</h4>
                     </Button>
                   ))
                 ) : (
-                  <Button variant="link">{t("evolutionBot.table.none")}</Button>
+                  <Button variant="link">{t("EvolutionBot.table.none")}</Button>
                 )}
               </>
             )}
           </div>
         </ResizablePanel>
-        {evolutionBotId && (
+        {EvolutionBotId && (
           <>
             <ResizableHandle withHandle className="border border-border" />
             <ResizablePanel>
-              <UpdateEvolutionBot evolutionBotId={evolutionBotId} resetTable={resetTable} />
+              <UpdateEvolutionBot EvolutionBotId={EvolutionBotId} resetTable={resetTable} />
             </ResizablePanel>
           </>
         )}

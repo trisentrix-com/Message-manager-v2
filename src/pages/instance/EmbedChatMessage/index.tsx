@@ -25,7 +25,7 @@ import { TOKEN_ID, getToken } from "@/lib/queries/token";
 
 import { connectSocket, disconnectSocket } from "@/services/websocket/socket";
 
-import { Chat as ChatType } from "@/types/evolution.types";
+import { Chat as ChatType } from "@/types/Evolution.types";
 
 // Importações de utilitários
 import { useMediaQuery } from "@/utils/useMediaQuery";

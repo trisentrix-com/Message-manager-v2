@@ -18,7 +18,7 @@ import { useFindDefaultSettingsEvolutionBot } from "@/lib/queries/evolutionBot/f
 import { useFindEvolutionBot } from "@/lib/queries/evolutionBot/findEvolutionBot";
 import { useManageEvolutionBot } from "@/lib/queries/evolutionBot/manageEvolutionBot";
 
-import { EvolutionBotSettings } from "@/types/evolution.types";
+import { EvolutionBotSettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   expire: z.string(),
@@ -55,9 +55,9 @@ function DefaultSettingsEvolutionBot() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       expire: "0",
-      keywordFinish: t("evolutionBot.form.examples.keywordFinish"),
+      keywordFinish: t("EvolutionBot.form.examples.keywordFinish"),
       delayMessage: "1000",
-      unknownMessage: t("evolutionBot.form.examples.unknownMessage"),
+      unknownMessage: t("EvolutionBot.form.examples.unknownMessage"),
       listeningFromMe: false,
       stopBotFromMe: false,
       keepOpen: false,
@@ -115,7 +115,7 @@ function DefaultSettingsEvolutionBot() {
         token: instance.token,
         data: settingsData,
       });
-      toast.success(t("evolutionBot.toast.defaultSettings.success"));
+      toast.success(t("EvolutionBot.toast.defaultSettings.success"));
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       console.error("Error:", error);
@@ -133,12 +133,12 @@ function DefaultSettingsEvolutionBot() {
       <DialogTrigger asChild>
         <Button variant="secondary" size="sm">
           <Cog size={16} className="mr-1" />
-          <span className="hidden sm:inline">{t("evolutionBot.defaultSettings")}</span>
+          <span className="hidden sm:inline">{t("EvolutionBot.defaultSettings")}</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="overflow-y-auto sm:max-h-[600px] sm:max-w-[740px]" onCloseAutoFocus={onReset}>
         <DialogHeader>
-          <DialogTitle>{t("evolutionBot.defaultSettings")}</DialogTitle>
+          <DialogTitle>{t("EvolutionBot.defaultSettings")}</DialogTitle>
         </DialogHeader>
         <FormProvider {...form}>
           <form className="w-full space-y-6" onSubmit={form.handleSubmit(onSubmit)}>
@@ -146,7 +146,7 @@ function DefaultSettingsEvolutionBot() {
               <div className="space-y-4">
                 <FormSelect
                   name="botIdFallback"
-                  label={t("evolutionBot.form.botIdFallback.label")}
+                  label={t("EvolutionBot.form.botIdFallback.label")}
                   options={
                     bots
                       ?.filter((bot) => !!bot.id)
@@ -156,38 +156,38 @@ function DefaultSettingsEvolutionBot() {
                       })) ?? []
                   }
                 />
-                <FormInput name="expire" label={t("evolutionBot.form.expire.label")}>
+                <FormInput name="expire" label={t("EvolutionBot.form.expire.label")}>
                   <Input type="number" />
                 </FormInput>
-                <FormInput name="keywordFinish" label={t("evolutionBot.form.keywordFinish.label")}>
+                <FormInput name="keywordFinish" label={t("EvolutionBot.form.keywordFinish.label")}>
                   <Input />
                 </FormInput>
-                <FormInput name="delayMessage" label={t("evolutionBot.form.delayMessage.label")}>
+                <FormInput name="delayMessage" label={t("EvolutionBot.form.delayMessage.label")}>
                   <Input type="number" />
                 </FormInput>
-                <FormInput name="unknownMessage" label={t("evolutionBot.form.unknownMessage.label")}>
+                <FormInput name="unknownMessage" label={t("EvolutionBot.form.unknownMessage.label")}>
                   <Input />
                 </FormInput>
-                <FormSwitch name="listeningFromMe" label={t("evolutionBot.form.listeningFromMe.label")} reverse />
-                <FormSwitch name="stopBotFromMe" label={t("evolutionBot.form.stopBotFromMe.label")} reverse />
-                <FormSwitch name="keepOpen" label={t("evolutionBot.form.keepOpen.label")} reverse />
-                <FormInput name="debounceTime" label={t("evolutionBot.form.debounceTime.label")}>
+                <FormSwitch name="listeningFromMe" label={t("EvolutionBot.form.listeningFromMe.label")} reverse />
+                <FormSwitch name="stopBotFromMe" label={t("EvolutionBot.form.stopBotFromMe.label")} reverse />
+                <FormSwitch name="keepOpen" label={t("EvolutionBot.form.keepOpen.label")} reverse />
+                <FormInput name="debounceTime" label={t("EvolutionBot.form.debounceTime.label")}>
                   <Input type="number" />
                 </FormInput>
 
-                <FormSwitch name="splitMessages" label={t("evolutionBot.form.splitMessages.label")} reverse />
+                <FormSwitch name="splitMessages" label={t("EvolutionBot.form.splitMessages.label")} reverse />
 
                 {form.watch("splitMessages") && (
-                  <FormInput name="timePerChar" label={t("evolutionBot.form.timePerChar.label")}>
+                  <FormInput name="timePerChar" label={t("EvolutionBot.form.timePerChar.label")}>
                     <Input type="number" />
                   </FormInput>
                 )}
 
-                <FormTags name="ignoreJids" label={t("evolutionBot.form.ignoreJids.label")} placeholder={t("evolutionBot.form.ignoreJids.placeholder")} />
+                <FormTags name="ignoreJids" label={t("EvolutionBot.form.ignoreJids.label")} placeholder={t("EvolutionBot.form.ignoreJids.placeholder")} />
               </div>
             </div>
             <DialogFooter>
-              <Button type="submit">{t("evolutionBot.button.save")}</Button>
+              <Button type="submit">{t("EvolutionBot.button.save")}</Button>
             </DialogFooter>
           </form>
         </FormProvider>

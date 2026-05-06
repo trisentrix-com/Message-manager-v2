@@ -11,16 +11,16 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useGetEvolutionBot } from "@/lib/queries/evolutionBot/getEvolutionBot";
 import { useManageEvolutionBot } from "@/lib/queries/evolutionBot/manageEvolutionBot";
 
-import { EvolutionBot } from "@/types/evolution.types";
+import { EvolutionBot } from "@/types/Evolution.types";
 
 import { EvolutionBotForm, FormSchemaType } from "./EvolutionBotForm";
 
 type UpdateEvolutionBotProps = {
-  evolutionBotId: string;
+  EvolutionBotId: string;
   resetTable: () => void;
 };
 
-function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotProps) {
+function UpdateEvolutionBot({ EvolutionBotId, resetTable }: UpdateEvolutionBotProps) {
   const { t } = useTranslation();
   const { instance } = useInstance();
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotPr
   const { deleteEvolutionBot, updateEvolutionBot } = useManageEvolutionBot();
   const { data: bot, isLoading } = useGetEvolutionBot({
     instanceName: instance?.name,
-    evolutionBotId,
+    EvolutionBotId,
   });
 
   const initialData = useMemo(
@@ -75,8 +75,8 @@ function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotPr
 
   const onSubmit = async (data: FormSchemaType) => {
     try {
-      if (instance && instance.name && evolutionBotId) {
-        const evolutionBotData: EvolutionBot = {
+      if (instance && instance.name && EvolutionBotId) {
+        const EvolutionBotData: EvolutionBot = {
           enabled: data.enabled,
           description: data.description,
           apiUrl: data.apiUrl,
@@ -98,12 +98,12 @@ function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotPr
 
         await updateEvolutionBot({
           instanceName: instance.name,
-          evolutionBotId,
-          data: evolutionBotData,
+          EvolutionBotId,
+          data: EvolutionBotData,
         });
-        toast.success(t("evolutionBot.toast.success.update"));
+        toast.success(t("EvolutionBot.toast.success.update"));
         resetTable();
-        navigate(`/manager/instance/${instance.id}/evolutionBot/${evolutionBotId}`);
+        navigate(`/manager/instance/${instance.id}/EvolutionBot/${EvolutionBotId}`);
       } else {
         console.error("Token not found");
       }
@@ -115,21 +115,21 @@ function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotPr
 
   const handleDelete = async () => {
     try {
-      if (instance && instance.name && evolutionBotId) {
+      if (instance && instance.name && EvolutionBotId) {
         await deleteEvolutionBot({
           instanceName: instance.name,
-          evolutionBotId,
+          EvolutionBotId,
         });
-        toast.success(t("evolutionBot.toast.success.delete"));
+        toast.success(t("EvolutionBot.toast.success.delete"));
 
         setOpenDeletionDialog(false);
         resetTable();
-        navigate(`/manager/instance/${instance.id}/evolutionBot`);
+        navigate(`/manager/instance/${instance.id}/EvolutionBot`);
       } else {
         console.error("instance not found");
       }
     } catch (error) {
-      console.error("Erro ao excluir evolutionBot:", error);
+      console.error("Erro ao excluir EvolutionBot:", error);
     }
   };
 
@@ -142,7 +142,7 @@ function UpdateEvolutionBot({ evolutionBotId, resetTable }: UpdateEvolutionBotPr
       <EvolutionBotForm
         initialData={initialData}
         onSubmit={onSubmit}
-        evolutionBotId={evolutionBotId}
+        EvolutionBotId={EvolutionBotId}
         handleDelete={handleDelete}
         isModal={false}
         openDeletionDialog={openDeletionDialog}

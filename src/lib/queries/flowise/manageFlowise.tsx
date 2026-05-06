@@ -1,4 +1,4 @@
-import { Flowise, FlowiseSettings } from "@/types/evolution.types";
+import { Flowise, FlowiseSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

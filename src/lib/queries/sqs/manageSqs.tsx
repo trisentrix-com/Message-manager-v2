@@ -1,4 +1,4 @@
-import { Sqs } from "@/types/evolution.types";
+import { Sqs } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

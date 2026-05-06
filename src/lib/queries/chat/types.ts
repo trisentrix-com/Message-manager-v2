@@ -1,4 +1,4 @@
-import { Chat, Message } from "@/types/evolution.types";
+import { Chat, Message } from "@/types/Evolution.types";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type FindChatResponse = Chat;

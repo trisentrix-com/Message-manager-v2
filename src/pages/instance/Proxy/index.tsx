@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useFetchProxy } from "@/lib/queries/proxy/fetchProxy";
 import { useManageProxy } from "@/lib/queries/proxy/manageProxy";
 
-import { Proxy as ProxyType } from "@/types/evolution.types";
+import { Proxy as ProxyType } from "@/types/Evolution.types";
 
 const formSchema = z.object({
   enabled: z.boolean(),

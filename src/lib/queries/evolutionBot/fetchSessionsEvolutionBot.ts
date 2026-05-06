@@ -6,21 +6,21 @@ import { FetchSessionsEvolutionBotResponse } from "./types";
 
 interface IParams {
   instanceName: string | null;
-  evolutionBotId: string | null;
+  EvolutionBotId: string | null;
   token?: string | null;
 }
 
-const queryKey = (params: Partial<IParams>) => ["evolutionBot", "fetchSessions", JSON.stringify(params)];
+const queryKey = (params: Partial<IParams>) => ["EvolutionBot", "fetchSessions", JSON.stringify(params)];
 
-export const fetchEvolutionBotSessions = async ({ instanceName, evolutionBotId, token }: IParams) => {
-  const response = await api.get(`/evolutionBot/fetchSessions/${evolutionBotId}/${instanceName}`, {
+export const fetchEvolutionBotSessions = async ({ instanceName, EvolutionBotId, token }: IParams) => {
+  const response = await api.get(`/EvolutionBot/fetchSessions/${EvolutionBotId}/${instanceName}`, {
     headers: { apiKey: token },
   });
   return response.data;
 };
 
 export const useFetchSessionsEvolutionBot = (props: UseQueryParams<FetchSessionsEvolutionBotResponse> & Partial<IParams>) => {
-  const { instanceName, token, evolutionBotId, ...rest } = props;
+  const { instanceName, token, EvolutionBotId, ...rest } = props;
   return useQuery<FetchSessionsEvolutionBotResponse>({
     ...rest,
     queryKey: queryKey({ instanceName }),
@@ -28,8 +28,8 @@ export const useFetchSessionsEvolutionBot = (props: UseQueryParams<FetchSessions
       fetchEvolutionBotSessions({
         instanceName: instanceName!,
         token,
-        evolutionBotId: evolutionBotId!,
+        EvolutionBotId: EvolutionBotId!,
       }),
-    enabled: !!instanceName && !!evolutionBotId && (props.enabled ?? true),
+    enabled: !!instanceName && !!EvolutionBotId && (props.enabled ?? true),
   });
 };

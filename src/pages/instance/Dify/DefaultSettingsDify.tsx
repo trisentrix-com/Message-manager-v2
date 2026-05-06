@@ -18,7 +18,7 @@ import { useFetchDify } from "@/lib/queries/dify/fetchDify";
 import { useManageDify } from "@/lib/queries/dify/manageDify";
 import { useFetchDefaultSettings } from "@/lib/queries/dify/settingsFind";
 
-import { DifySettings } from "@/types/evolution.types";
+import { DifySettings } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   expire: z.string(),

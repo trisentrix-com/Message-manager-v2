@@ -1,4 +1,4 @@
-import { N8n, N8nSettings } from "@/types/evolution.types";
+import { N8n, N8nSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

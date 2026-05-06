@@ -1,4 +1,4 @@
-import { Instance, Settings } from "@/types/evolution.types";
+import { Instance, Settings } from "@/types/Evolution.types";
 
 export type FetchInstancesResponse = Instance[];
 

@@ -1,4 +1,4 @@
-import { SendText, SendMedia, SendAudio } from "@/types/evolution.types";
+import { SendText, SendMedia, SendAudio } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

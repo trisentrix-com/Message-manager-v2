@@ -1,4 +1,4 @@
-import { NewInstance, Settings } from "@/types/evolution.types";
+import { NewInstance, Settings } from "@/types/Evolution.types";
 
 import { api, apiGlobal } from "../api";
 import { useManageMutation } from "../mutateQuery";
@@ -35,7 +35,6 @@ const connect = async ({ instanceName, token, number }: ConnectParams) => {
   });
   return response.data;
 };
-
 interface UpdateSettingsParams {
   instanceName: string;
   token: string;

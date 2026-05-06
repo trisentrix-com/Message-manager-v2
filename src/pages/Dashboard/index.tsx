@@ -16,7 +16,7 @@ import { Input } from "@/components/ui/input";
 import { useFetchInstances } from "@/lib/queries/instance/fetchInstances";
 import { useManageInstance } from "@/lib/queries/instance/manageInstance";
 
-import { Instance } from "@/types/evolution.types";
+import { Instance } from "@/types/Evolution.types";
 
 import { NewInstance } from "./NewInstance";
 import { TooltipWrapper } from "@/components/ui/tooltip";
@@ -114,8 +114,7 @@ function Dashboard() {
         </DropdownMenu>
       </div>
       <main className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {filteredInstances.length > 0 &&
-          Array.isArray(filteredInstances) ? (
+        {filteredInstances.length > 0 && Array.isArray(filteredInstances) ? (
           filteredInstances.map((instance: Instance) => (
             <Card key={instance.id}>
               <CardHeader>
@@ -167,9 +166,10 @@ function Dashboard() {
                 </Button>
               </CardFooter>
             </Card>
-          ))) :(
+          ))
+        ) : (
           <p>{t("dashboard.instancesNotFound")}</p>
-          )}
+        )}
       </main>
 
       {!!deleteConfirmation && (

@@ -6,14 +6,14 @@ import { GetEvolutionBotResponse } from "./types";
 
 interface IParams {
   instanceName: string;
-  evolutionBotId: string;
+  EvolutionBotId: string;
   token?: string | null;
 }
 
-const queryKey = (params: Partial<IParams>) => ["evolutionBot", "getEvolutionBot", JSON.stringify(params)];
+const queryKey = (params: Partial<IParams>) => ["EvolutionBot", "getEvolutionBot", JSON.stringify(params)];
 
-export const getEvolutionBot = async ({ instanceName, token, evolutionBotId }: IParams) => {
-  const response = await api.get(`/evolutionBot/fetch/${evolutionBotId}/${instanceName}`, {
+export const getEvolutionBot = async ({ instanceName, token, EvolutionBotId }: IParams) => {
+  const response = await api.get(`/EvolutionBot/fetch/${EvolutionBotId}/${instanceName}`, {
     headers: { apiKey: token },
   });
   if (Array.isArray(response.data)) {
@@ -23,7 +23,7 @@ export const getEvolutionBot = async ({ instanceName, token, evolutionBotId }: I
 };
 
 export const useGetEvolutionBot = (props: UseQueryParams<GetEvolutionBotResponse> & Partial<IParams>) => {
-  const { instanceName, token, evolutionBotId, ...rest } = props;
+  const { instanceName, token, EvolutionBotId, ...rest } = props;
   return useQuery<GetEvolutionBotResponse>({
     ...rest,
     queryKey: queryKey({ instanceName }),
@@ -31,8 +31,8 @@ export const useGetEvolutionBot = (props: UseQueryParams<GetEvolutionBotResponse
       getEvolutionBot({
         instanceName: instanceName!,
         token,
-        evolutionBotId: evolutionBotId!,
+        EvolutionBotId: EvolutionBotId!,
       }),
-    enabled: !!instanceName && !!evolutionBotId && (props.enabled ?? true),
+    enabled: !!instanceName && !!EvolutionBotId && (props.enabled ?? true),
   });
 };

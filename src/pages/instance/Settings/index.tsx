@@ -16,7 +16,7 @@ import { useInstance } from "@/contexts/InstanceContext";
 import { useManageInstance } from "@/lib/queries/instance/manageInstance";
 import { useFetchSettings } from "@/lib/queries/instance/settingsFind";
 
-import { Settings as SettingsType } from "@/types/evolution.types";
+import { Settings as SettingsType } from "@/types/Evolution.types";
 
 const FormSchema = z.object({
   rejectCall: z.boolean(),

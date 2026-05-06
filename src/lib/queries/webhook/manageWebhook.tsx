@@ -1,4 +1,4 @@
-import { Webhook } from "@/types/evolution.types";
+import { Webhook } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

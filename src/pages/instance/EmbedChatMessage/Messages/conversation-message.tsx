@@ -1,4 +1,4 @@
-import { Message } from "@/types/evolution.types";
+import { Message } from "@/types/Evolution.types";
 
 import { InteractiveButton } from "./interactive-button";
 import { MarkdownWrapper } from "./markdown-wrapper";

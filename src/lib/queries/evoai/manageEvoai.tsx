@@ -1,4 +1,4 @@
-import { Evoai, EvoaiSettings } from "@/types/evolution.types";
+import { Evoai, EvoaiSettings } from "@/types/Evolution.types";
 
 import { api } from "../api";
 import { useManageMutation } from "../mutateQuery";

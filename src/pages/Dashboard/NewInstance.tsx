@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 
 import { useManageInstance } from "@/lib/queries/instance/manageInstance";
 
-import { NewInstance as NewInstanceType } from "@/types/evolution.types";
+import { NewInstance as NewInstanceType } from "@/types/Evolution.types";
 
 const stringOrUndefined = z
   .string()
@@ -26,7 +26,7 @@ const FormSchema = z.object({
   token: stringOrUndefined,
   number: stringOrUndefined,
   businessId: stringOrUndefined,
-  integration: z.enum(["WHATSAPP-BUSINESS", "WHATSAPP-BAILEYS", "EVOLUTION"]),
+  integration: z.enum(["WHATSAPP-BUSINESS", "WHATSAPP-BAILEYS", "message"]),
 });
 
 function NewInstance({ resetTable }: { resetTable: () => void }) {
@@ -43,8 +43,8 @@ function NewInstance({ resetTable }: { resetTable: () => void }) {
       label: t("instance.form.integration.whatsapp"),
     },
     {
-      value: "EVOLUTION",
-      label: t("instance.form.integration.evolution"),
+      value: "message",
+      label: t("instance.form.integration.message"),
     },
   ];
 
